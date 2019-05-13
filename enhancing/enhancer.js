@@ -6,22 +6,23 @@ module.exports = {
 };
 
 function succeed(item) {
-  if (item.enhancment < 20) {
-   return { ...item, enhancment:item.enhancment + 1}; 
+  if (item.enhancement > 19) {
+   return { ...item, enhancement:item.enhancement }; 
   } else {
-    return { ...item, enhancment:item.enhancment}; 
+    return { ...item, enhancement:item.enhancement + 1}; 
   }
 }
 
 function fail(item) {
-  if ( item.enhancment < 15 && item.enhancment > 0) {
-    return { ...item, durability:item.durability - 5};
-  } else if (item.enhancment >= 15) {
-    return { ...item, durability:item.durability - 10};
-  } else if (item.enhancment > 16) {
-    return { ...item, enhancment:item.enhancment - 1}
+  if ( item.enhancement < 15 && item.enhancement > 0) {
+    return { ...item, durability:item.durability - 5}
+  } else if (item.enhancement > 15 && item.enhancement > 16) {
+    return { ...item, durability:item.durability - 10,  enhancement:item.enhancement - 1}
+   } else if (item.enhancement > 16) {
+    return { ...item, enhancement:item.enhancement - 1}   
+  } else if (item.enhancement >= 15) {
+    return { ...item, durability:item.durability - 10}
   } 
-  return item;
 }
 
 function repair(item) {
