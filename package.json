@@ -1,0 +1,23 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "description": "week 4 monday challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": "https://github.com/fixmylifedesigns/webtesting-i-challenge.git",
+  "keywords": [
+    "lambda",
+    "testing"
+  ],
+  "author": "Irving Duran <ijd.irving@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/webtesting-i-guided/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/webtesting-i-guided#readme",
+  "license": "MIT",  
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
